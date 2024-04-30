@@ -33,3 +33,18 @@ function maxAndMin(arr1,arr2){
 }
 
 // or
+
+function maxAndMin(arr1,arr2){
+  let min = Infinity; 
+  let max = -Infinity;
+  
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      const diff = Math.abs(arr1[i] - arr2[j]);
+      if (diff > max) max = diff
+      if (diff < min) min = diff;
+    }
+  }
+  
+  return [max, min];
+}
